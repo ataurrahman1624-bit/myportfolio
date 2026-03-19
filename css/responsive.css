@@ -251,24 +251,120 @@
   }
   /*--expertise--*/
   #expertise {
-    padding: 10px;
+    border-bottom: 2px solid #686868;
+    padding: 30px 0;
 }
-  .exp-card {
-        padding: 1.4rem;
-        border-radius: 14px;
+  .section-title {
+        font-size: 40px;
+        margin-bottom: 28px;
       }
-
+ 
+      .exp-card {
+        padding: 24px 20px;
+        border-radius: 12px;
+      }
+ 
       .icon-box {
-        width: 44px;
-        height: 44px;
-        border-radius: 11px;
+        width: 46px;
+        height: 46px;
+        font-size: 20px;
+        border-radius: 10px;
+        margin-bottom: 16px;
       }
-      .icon-box i { font-size: 1.1rem; }
-
-      .card-heading { font-size: 1.05rem; }
-      .card-desc    { font-size: 0.845rem; }
-      .tag          { font-size: 0.75rem; padding: 0.24rem 0.65rem; }
+ 
+      .card-heading {
+        font-size: 16px;
+      }
+ 
+      .card-desc {
+    font-size: 13px;
+}
+ 
+      .tag {
+        font-size: 11px;
+        padding: 3px 10px;
+      }
 
       h2.section-title { font-size: 1.35rem; margin-bottom: 1.4rem; }
+      .about-section { padding: 64px 0 80px; }
 
+      .about-label {
+        font-size: clamp(3.5rem, 14vw, 6rem);
+        margin-bottom: 32px;
+      }
+
+      .v-rule { display: none; }
+
+      .photo-wrap {
+        width: 160px;
+        margin: 0 auto 40px;
+      }
+
+      .content-col { gap: 20px; }
+
+      .body-text { max-width: 100%; }
+
+      .stat-chips { gap: 10px; }
+      .about-label {
+    font-size: 42px;
+    line-height: 1px;
+}
+.headline {
+    font-size: 20px;
+    line-height: 1;
+
+}
+.chip {
+    font-size: 11px;
+}
+.gap-5 {
+    gap: 0rem!important;
+}
+.contact-section {
+        padding: 48px 24px 32px 24px;
+      }
+
+      .contact-inner {
+        flex-direction: column;
+        gap: 0;
+      }
+
+      .contact-heading {
+        font-size: 56px;
+        margin-bottom: 16px;
+      }
+
+      .contact-info {
+        font-size: 14px;
+      }
+
+      .social-icons {
+        margin-top: 24px;
+        margin-bottom: 40px;
+      }
+
+      .contact-right {
+        max-width: 100%;
+        gap: 16px;
+      }
+
+      .form-control-custom {
+        padding: 12px 14px;
+        font-size: 14px;
+      }
+
+      textarea.form-control-custom {
+        min-height: 140px;
+      }
+
+      .submit-btn {
+        font-size: 16px;
+        padding: 14px 36px;
+        width: auto;
+      }
+
+      .contact-footer {
+        padding-top: 36px;
+        font-size: 12px;
+      }
 }
