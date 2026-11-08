@@ -165,9 +165,9 @@
                             <div class="row g-0 align-items-stretch">
                                 <div class="col-12 col-lg-6 mockup-col">
                                     <div class="projectImg">
-                                        <a href="https://ataurrahman1624-bit.github.io/AshikurWithPlugin/" target="_blank" rel="noopener noreferrer" aria-label="View portfolio project">
+                                        <a href="https://github.com/ataurrahman/portfolio" target="_blank" rel="noopener noreferrer" aria-label="View portfolio project">
                                             <img src="./image/Screenshot%202026-03-18%20214229.png" alt="Personal portfolio website screenshot" loading="lazy" decoding="async">
-                                </a>
+                                        </a>
                                     </div>
                                 </div>
                                 <div class="col-12 col-lg-6 info-col d-flex flex-column justify-content-center">
@@ -181,8 +181,8 @@
                                     </div>
                                     <div class="project-links d-flex align-items-center gap-4">
                                         <!-- TODO: point "Live demo" at the deployed site; it currently duplicates the GitHub link -->
-                                        <a href="https://ataurrahman1624-bit.github.io/AshikurWithPlugin/" target="_blank" rel="noopener noreferrer" class="link-cta">Live demo <i class="bi bi-box-arrow-up-right"></i></a>
-                                        <a href="https://github.com/ataurrahman1624-bit/AshikurWithPlugin" target="_blank" rel="noopener noreferrer" class="link-cta">See on GitHub <i class="bi bi-github"></i></a>
+                                        <a href="https://github.com/ataurrahman/portfolio" target="_blank" rel="noopener noreferrer" class="link-cta">Live demo <i class="bi bi-box-arrow-up-right"></i></a>
+                                        <a href="https://github.com/ataurrahman/portfolio" target="_blank" rel="noopener noreferrer" class="link-cta">See on GitHub <i class="bi bi-github"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -194,7 +194,7 @@
                             <div class="row g-0 align-items-stretch">
                                 <div class="col-12 col-lg-6 mockup-col">
                                     <div class="projectImg">
-                                        <a href="https://ataurrahman1624-bit.github.io/EcoBazar/" target="_blank" rel="noopener noreferrer" aria-label="View EcoBazar project">
+                                        <a href="https://github.com/ataurrahman/ecobazar" target="_blank" rel="noopener noreferrer" aria-label="View EcoBazar project">
                                             <img src="./image/Thumbnail.png" alt="EcoBazar eCommerce website thumbnail" loading="lazy" decoding="async">
                                         </a>
                                     </div>
@@ -209,8 +209,8 @@
                                         <div class="meta-row"><span class="meta-key"><i class="bi bi-person-badge"></i> Role</span><span class="meta-val">Full-Stack Developer</span></div>
                                     </div>
                                     <div class="project-links d-flex align-items-center gap-4">
-                                        <a href="https://ataurrahman1624-bit.github.io/EcoBazar/" target="_blank" rel="noopener noreferrer" class="link-cta">Live demo <i class="bi bi-box-arrow-up-right"></i></a>
-                                        <a href="https://github.com/ataurrahman1624-bit/EcoBazar" target="_blank" rel="noopener noreferrer" class="link-cta">See on GitHub <i class="bi bi-github"></i></a>
+                                        <a href="https://github.com/ataurrahman/ecobazar" target="_blank" rel="noopener noreferrer" class="link-cta">Live demo <i class="bi bi-box-arrow-up-right"></i></a>
+                                        <a href="https://github.com/ataurrahman/ecobazar" target="_blank" rel="noopener noreferrer" class="link-cta">See on GitHub <i class="bi bi-github"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -335,16 +335,33 @@
                         </div>
                     </div>
                     <div class="contact-right" data-aos="fade-left" data-aos-delay="100">
-                        <!-- TODO: replace "your-form-id" with your real Formspree form ID -->
-                        <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form" aria-label="Contact me">
-                            <div><label class="form-label-custom" for="cf-name">Name</label><input type="text" id="cf-name" name="name" class="form-control-custom" placeholder="Your name" autocomplete="name" required></div>
-                            <div><label class="form-label-custom" for="cf-email">Email</label><input type="email" id="cf-email" name="email" class="form-control-custom" placeholder="you@example.com" autocomplete="email" required></div>
-                            <div><label class="form-label-custom" for="cf-subject">Subject</label><input type="text" id="cf-subject" name="subject" class="form-control-custom" placeholder="What's it about?" required></div>
-                            <div><label class="form-label-custom" for="cf-message">Message</label><textarea id="cf-message" name="message" class="form-control-custom" placeholder="Tell me about your project..." rows="5" required></textarea></div>
-                            <input type="text" name="_gotcha" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
-                            <button class="submit-btn" type="submit"><span>Send message</span> <i class="bi bi-send-fill"></i></button>
-                            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
-                        </form>
+                        <!-- TODO: set data-endpoint to your deployed Cloudflare Worker URL (see worker/brevo-worker.js) -->
+                        <form action="https://formspree.io/f/xwlljjgb" method="POST" class="contact-form" aria-label="Contact me">
+    <div>
+        <label class="form-label-custom" for="cf-name">Name</label>
+        <input type="text" id="cf-name" name="name" class="form-control-custom" placeholder="Your name" autocomplete="name" required>
+    </div>
+    <div>
+        <label class="form-label-custom" for="cf-email">Email</label>
+        <input type="email" id="cf-email" name="email" class="form-control-custom" placeholder="you@example.com" autocomplete="email" required>
+    </div>
+    <div>
+        <label class="form-label-custom" for="cf-subject">Subject</label>
+        <input type="text" id="cf-subject" name="subject" class="form-control-custom" placeholder="What's it about?" required>
+    </div>
+    <div>
+        <label class="form-label-custom" for="cf-message">Message</label>
+        <textarea id="cf-message" name="message" class="form-control-custom" placeholder="Tell me about your project..." rows="5" required></textarea>
+    </div>
+    
+    <!-- স্প্যাম প্রতিরোধের জন্য গটচা ফিল্ড -->
+    <input type="text" name="_gotcha" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
+    
+    <button class="submit-btn" type="submit">
+        <span>Send message</span> <i class="bi bi-send-fill"></i>
+    </button>
+    <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+</form>
                     </div>
                 </div>
             </div>

@@ -206,18 +206,16 @@
 
   if (form) {
     form.addEventListener('submit', function (e) {
-      var action = form.getAttribute('action') || '';
+      e.preventDefault();
+      var action = form.getAttribute('data-endpoint') || '';
 
-      // Placeholder endpoint: don't send visitors to a Formspree 404 page.
-      if (/your-form-id/.test(action)) {
-        e.preventDefault();
-        console.warn('Contact form: replace "your-form-id" in index.html with your real Formspree ID.');
+      if (!action || /YOUR-WORKER/.test(action)) {
+        console.warn('Contact form: set data-endpoint in index.html to your Cloudflare Worker URL.');
         setStatus('The form is not connected yet. Please email me directly instead.', 'error');
         return;
       }
-      if (!window.fetch || !window.FormData) return;   // old browser → normal form submit
+      if (!form.checkValidity()) { form.reportValidity(); return; }
 
-      e.preventDefault();
       var btn = $('.submit-btn', form);
       var label = $('span', btn);
       var original = label.textContent;
@@ -225,7 +223,10 @@
       label.textContent = 'Sending...';
       setStatus('', '');
 
-      fetch(action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } })
+      var data = {};
+      new FormData(form).forEach(function (v, k) { data[k] = v; });
+
+      fetch(action, { method: 'POST', body: JSON.stringify(data), headers: { 'Content-Type': 'application/json' } })
         .then(function (res) {
           if (!res.ok) throw new Error('HTTP ' + res.status);
           form.reset();
